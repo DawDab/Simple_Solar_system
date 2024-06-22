@@ -1,0 +1,297 @@
+[gd_scene load_steps=48 format=3 uid="uid://chqw256xblh75"]
+
+[ext_resource type="Texture2D" uid="uid://cmd12y8342kop" path="res://8k_stars_milky_way.jpg" id="1_ha8u1"]
+[ext_resource type="Script" path="res://SolarSystem.gd" id="1_ywev8"]
+[ext_resource type="Script" path="res://CelestialBody.gd" id="2_s4vvo"]
+[ext_resource type="Texture2D" uid="uid://b4fog76ec1wxl" path="res://8k_sun.jpg" id="3_x16m8"]
+[ext_resource type="Texture2D" uid="uid://ne4fep6bpspj" path="res://8k_earth_daymap.jpg" id="4_yxa7r"]
+[ext_resource type="Texture2D" uid="uid://d2fxhuqj8bwur" path="res://8k_mars.jpg" id="6_nis7k"]
+[ext_resource type="Texture2D" uid="uid://bravrop4p2e3" path="res://8k_moon.jpg" id="7_mjtxk"]
+[ext_resource type="Texture2D" uid="uid://dcuuorcykmown" path="res://8k_mercury.jpg" id="8_c1ol2"]
+[ext_resource type="Texture2D" uid="uid://duhly5yythytj" path="res://8k_jupiter.jpg" id="9_wqtpx"]
+[ext_resource type="Texture2D" uid="uid://bmya3535k5cv3" path="res://8k_saturn.jpg" id="10_352xv"]
+[ext_resource type="Texture2D" uid="uid://ced5liqci16li" path="res://2k_uranus.jpg" id="11_vohfi"]
+[ext_resource type="Texture2D" uid="uid://8cllaqwn2dgw" path="res://2k_neptune.jpg" id="12_dj3y3"]
+[ext_resource type="Texture2D" uid="uid://cct4oqwe41fo0" path="res://4k_venus_atmosphere.jpg" id="13_ufnnf"]
+[ext_resource type="PackedScene" uid="uid://dwymr3ds3kh81" path="res://player.tscn" id="14_ik8ab"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_o8uk0"]
+panorama = ExtResource("1_ha8u1")
+
+[sub_resource type="Sky" id="Sky_t3kex"]
+sky_material = SubResource("PanoramaSkyMaterial_o8uk0")
+
+[sub_resource type="Environment" id="Environment_q7f5y"]
+background_mode = 2
+sky = SubResource("Sky_t3kex")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rp5kl"]
+shading_mode = 0
+albedo_color = Color(100, 1, 0, 1)
+albedo_texture = ExtResource("3_x16m8")
+
+[sub_resource type="SphereMesh" id="SphereMesh_vhx1m"]
+material = SubResource("StandardMaterial3D_rp5kl")
+radius = 100.0
+height = 200.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_oi673"]
+radius = 100.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y57hd"]
+albedo_texture = ExtResource("8_c1ol2")
+
+[sub_resource type="SphereMesh" id="SphereMesh_k85ce"]
+material = SubResource("StandardMaterial3D_y57hd")
+radius = 4.0
+height = 8.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_suvuo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m8587"]
+albedo_texture = ExtResource("13_ufnnf")
+
+[sub_resource type="SphereMesh" id="SphereMesh_4ml5p"]
+material = SubResource("StandardMaterial3D_m8587")
+radius = 8.0
+height = 16.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jbtuw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nuaj2"]
+albedo_texture = ExtResource("4_yxa7r")
+
+[sub_resource type="SphereMesh" id="SphereMesh_d341n"]
+material = SubResource("StandardMaterial3D_nuaj2")
+radius = 10.0
+height = 20.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ig3u6"]
+radius = 5.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hvh1i"]
+albedo_texture = ExtResource("7_mjtxk")
+
+[sub_resource type="SphereMesh" id="SphereMesh_0gq38"]
+material = SubResource("StandardMaterial3D_hvh1i")
+radius = 2.7
+height = 5.4
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5am32"]
+radius = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rjf2a"]
+albedo_texture = ExtResource("6_nis7k")
+
+[sub_resource type="SphereMesh" id="SphereMesh_extys"]
+material = SubResource("StandardMaterial3D_rjf2a")
+radius = 6.0
+height = 12.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wx0ae"]
+radius = 10.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aetup"]
+albedo_texture = ExtResource("9_wqtpx")
+
+[sub_resource type="SphereMesh" id="SphereMesh_4wud5"]
+material = SubResource("StandardMaterial3D_aetup")
+radius = 24.0
+height = 48.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_73nu1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cf7af"]
+albedo_texture = ExtResource("10_352xv")
+
+[sub_resource type="SphereMesh" id="SphereMesh_osk3r"]
+material = SubResource("StandardMaterial3D_cf7af")
+radius = 20.0
+height = 40.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ee7nt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c5ku1"]
+albedo_texture = ExtResource("11_vohfi")
+
+[sub_resource type="SphereMesh" id="SphereMesh_r3f6s"]
+material = SubResource("StandardMaterial3D_c5ku1")
+radius = 16.0
+height = 32.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ef2l7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3o0bx"]
+albedo_texture = ExtResource("12_dj3y3")
+
+[sub_resource type="SphereMesh" id="SphereMesh_k1ax0"]
+material = SubResource("StandardMaterial3D_3o0bx")
+radius = 14.0
+height = 28.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dosjx"]
+
+[node name="SolarSystem" type="Node3D"]
+script = ExtResource("1_ywev8")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_q7f5y")
+
+[node name="Sun" type="StaticBody3D" parent="."]
+script = ExtResource("2_s4vvo")
+surface_radius = 100.0
+_surface_gravity = 200.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sun"]
+mesh = SubResource("SphereMesh_vhx1m")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Sun"]
+light_energy = 2.575
+omni_range = 10000.0
+omni_attenuation = 0.0769472
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sun"]
+shape = SubResource("SphereShape3D_oi673")
+
+[node name="Camera3D" type="Camera3D" parent="Sun"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1210.67, 0)
+current = true
+
+[node name="Mercury" type="StaticBody3D" parent="." node_paths=PackedStringArray("_OrbitalParent")]
+script = ExtResource("2_s4vvo")
+_OrbitalParent = NodePath("../Sun")
+_orbital_radius = 300.0
+surface_radius = 4.0
+_surface_gravity = 3.7
+_day_length = 1400.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mercury"]
+mesh = SubResource("SphereMesh_k85ce")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mercury"]
+shape = SubResource("SphereShape3D_suvuo")
+
+[node name="Venus" type="StaticBody3D" parent="." node_paths=PackedStringArray("_OrbitalParent")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -319.791)
+script = ExtResource("2_s4vvo")
+_OrbitalParent = NodePath("../Sun")
+_orbital_radius = 400.0
+_orbital_angle = 45.0
+surface_radius = 8.0
+_surface_gravity = 8.87
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Venus"]
+mesh = SubResource("SphereMesh_4ml5p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Venus"]
+shape = SubResource("SphereShape3D_jbtuw")
+
+[node name="Earth" type="StaticBody3D" parent="." node_paths=PackedStringArray("_OrbitalParent")]
+script = ExtResource("2_s4vvo")
+_OrbitalParent = NodePath("../Sun")
+_orbital_radius = 600.0
+_orbital_angle = 90.0
+surface_radius = 40.0
+_surface_gravity = 9.8
+_day_length = 24.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Earth"]
+mesh = SubResource("SphereMesh_d341n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Earth"]
+shape = SubResource("SphereShape3D_ig3u6")
+
+[node name="Moon" type="StaticBody3D" parent="." node_paths=PackedStringArray("_OrbitalParent")]
+script = ExtResource("2_s4vvo")
+_OrbitalParent = NodePath("../Earth")
+_orbital_radius = 40.0
+_orbital_angle = 90.0
+surface_radius = 40.0
+_surface_gravity = 200.0
+_tidally_locked = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Moon"]
+mesh = SubResource("SphereMesh_0gq38")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Moon"]
+shape = SubResource("SphereShape3D_5am32")
+
+[node name="Mars" type="StaticBody3D" parent="." node_paths=PackedStringArray("_OrbitalParent")]
+script = ExtResource("2_s4vvo")
+_OrbitalParent = NodePath("../Sun")
+_orbital_radius = 800.0
+_orbital_angle = 135.0
+surface_radius = 6.0
+_surface_gravity = 3.71
+_day_length = 24.6
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Mars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.99988, 0, 0)
+mesh = SubResource("SphereMesh_extys")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.00076, 0, 0)
+shape = SubResource("SphereShape3D_wx0ae")
+
+[node name="Jupiter" type="StaticBody3D" parent="." node_paths=PackedStringArray("_OrbitalParent")]
+script = ExtResource("2_s4vvo")
+_OrbitalParent = NodePath("../Sun")
+_orbital_radius = 1200.0
+_orbital_angle = 180.0
+surface_radius = 24.0
+_surface_gravity = 24.79
+_day_length = 9.9
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Jupiter"]
+mesh = SubResource("SphereMesh_4wud5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Jupiter"]
+shape = SubResource("SphereShape3D_73nu1")
+
+[node name="Saturn" type="StaticBody3D" parent="." node_paths=PackedStringArray("_OrbitalParent")]
+script = ExtResource("2_s4vvo")
+_OrbitalParent = NodePath("../Sun")
+_orbital_radius = 1600.0
+_orbital_angle = 225.0
+surface_radius = 20.0
+_surface_gravity = 10.44
+_day_length = 10.7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Saturn"]
+mesh = SubResource("SphereMesh_osk3r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Saturn"]
+shape = SubResource("SphereShape3D_ee7nt")
+
+[node name="Uranus" type="StaticBody3D" parent="." node_paths=PackedStringArray("_OrbitalParent")]
+script = ExtResource("2_s4vvo")
+_OrbitalParent = NodePath("../Sun")
+_orbital_radius = 2000.0
+_orbital_angle = 270.0
+surface_radius = 16.0
+_surface_gravity = 8.69
+_day_length = 17.2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Uranus"]
+mesh = SubResource("SphereMesh_r3f6s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Uranus"]
+shape = SubResource("SphereShape3D_ef2l7")
+
+[node name="Neptune" type="StaticBody3D" parent="." node_paths=PackedStringArray("_OrbitalParent")]
+script = ExtResource("2_s4vvo")
+_OrbitalParent = NodePath("../Sun")
+_orbital_radius = 2400.0
+_orbital_angle = 315.0
+surface_radius = 14.0
+_surface_gravity = 11.15
+_day_length = 16.1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Neptune"]
+mesh = SubResource("SphereMesh_k1ax0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Neptune"]
+shape = SubResource("SphereShape3D_dosjx")
+
+[node name="Player" parent="." instance=ExtResource("14_ik8ab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -307.1)
